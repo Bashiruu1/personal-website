@@ -1,3 +1,9 @@
 <section id="nav">
-  <p>nav works!</p>
+  <nav>
+    <ul>
+      <li *ngFor="let navItem of navData" [routerLink]="[navItem.path]">
+        {{ navItem.label | titlecase}}
+      </li>
+    </ul>
+  </nav>
 </section>
